@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "styled-components.vscode-styled-components",
+    "biomejs.biome",
+    "unifiedjs.vscode-mdx"
+  ]
+}

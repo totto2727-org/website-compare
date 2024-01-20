@@ -1,0 +1,23 @@
+{
+  "name": "website-compare",
+  "type": "module",
+  "scripts": {
+    "start": "bun run --hot ./src/index.ts",
+    "check": "run-z check:tsc,check:biome",
+    "check:tsc": "tsc",
+    "check:biome": "biome check .",
+    "fix": "run-z fix:biome",
+    "fix:biome": "biome check --apply-unsafe .",
+    "test": "run-z test:unit",
+    "test:unit": "bun test"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^1.5.2",
+    "@totto2727/result": "^0.6.8",
+    "bun-types": "latest",
+    "hono": "^3.12.6",
+    "remeda": "^1.37.0",
+    "run-z": "^2.0.0",
+    "typescript": "5.3.3"
+  }
+}
