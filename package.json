@@ -1,0 +1,37 @@
+{
+  "name": "website-compare",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "wrangler pages dev dist",
+    "deploy": "run-z build deploy",
+    "deploy:pages": "wrangler pages deploy dist",
+    "check": "run-z check:tsc,check:biome",
+    "check:tsc": "tsc",
+    "check:biome": "biome check .",
+    "fix": "run-z fix:biome",
+    "fix:biome": "biome check --apply-unsafe .",
+    "test": "run-z test:unit",
+    "test:unit": "bun test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.5.2",
+    "@cloudflare/workers-types": "^4.20231218.0",
+    "@hono/vite-cloudflare-pages": "^0.1.2",
+    "@hono/vite-dev-server": "^0.3.1",
+        "bun-types": "latest",
+        "run-z": "^2.0.0",
+        "vite": "^5.0.10",
+    "wrangler": "^3.22.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@totto2727/result": "^0.6.8",
+    "hono": "^3.12.6",
+    "remeda": "^1.37.0",
+    "vite-tsconfig-paths": "^4.3.1"
+  }
+}
