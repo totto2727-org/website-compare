@@ -1,0 +1,29 @@
+{
+  "name": "website-compare",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot index.ts",
+    "build": "bun build --compile --outfile ./dist/website-compare index.ts",
+    "check": "run-z check:tsc,check:biome",
+    "check:tsc": "tsc",
+    "check:biome": "biome check",
+    "fix": "run-z fix:biome",
+    "fix:biome": "biome check --apply",
+    "test": "run-z test:unit",
+    "test:unit": "bun test"
+  },
+  "devDependencies": {
+    "biome": "^0.3.3",
+    "bun-types": "latest",
+    "run-z": "^2.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@totto2727/result": "^0.6.8",
+    "hono": "^3.12.6",
+    "remeda": "^1.37.0"
+  }
+}
